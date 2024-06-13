@@ -3,7 +3,7 @@ import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBh_6JVwD9Q5u3inK31IFc7BbJLWdsVhgs",
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
   authDomain: "fir-tutorial-e8da1.firebaseapp.com",
   projectId: "fir-tutorial-e8da1",
   storageBucket: "fir-tutorial-e8da1.appspot.com",

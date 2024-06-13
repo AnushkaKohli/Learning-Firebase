@@ -1,4 +1,4 @@
-import { addDoc, collection } from "firebase/firestore";
+import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { db } from "../config/firebase";
 
 const AddBook = () => {
@@ -9,6 +9,7 @@ const AddBook = () => {
     await addDoc(collectionRef, {
       title: form.title.value,
       author: form.author.value,
+      createdAt: serverTimestamp(),
     });
     form.reset();
   };
