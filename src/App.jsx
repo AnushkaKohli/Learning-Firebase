@@ -6,6 +6,8 @@ import DeleteBook from "./components/DeleteBook";
 import AllBooks from "./components/AllBooks";
 import { useEffect } from "react";
 import QueryBook from "./components/QueryBook";
+import SingleDoc from "./components/SingleDoc";
+import UpdateBook from "./components/UpdateBook";
 
 function App() {
   // Collection reference
@@ -53,6 +55,8 @@ function App() {
       <DeleteBook />
       <AllBooks />
       <QueryBook />
+      <SingleDoc />
+      <UpdateBook />
     </div>
   );
 }
