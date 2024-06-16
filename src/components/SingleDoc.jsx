@@ -18,7 +18,12 @@ const SingleDoc = () => {
   useEffect(() => {
     getSingleDoc();
   }, []);
-  return <div></div>;
+  return (
+    <div>
+      <h2>Single Doc</h2>
+      <p>Check console for single doc</p>
+    </div>
+  );
 };
 
 export default SingleDoc;

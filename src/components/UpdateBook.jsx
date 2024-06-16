@@ -9,6 +9,7 @@ const UpdateBook = () => {
       title: e.target.title.value,
       author: e.target.author.value,
     });
+    e.target.reset();
   };
   return (
     <div className="form-div">

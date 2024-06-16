@@ -44,7 +44,13 @@
 .button-div {
   display: flex;
   justify-content: center;
+
   column-gap: 10px;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
 }
 
 .form{
@@ -68,4 +74,8 @@ label {
 
 .form-div {
   margin-top: 50px;
+}
+
+.logout-button {
+  margin-top: 30px;
 }

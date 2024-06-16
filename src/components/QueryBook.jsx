@@ -28,7 +28,11 @@ const QueryBook = () => {
   useEffect(() => {
     handleRealTimeUpdates();
   }, []);
-  return <div></div>;
+  return (
+    <div>
+      <h2>Query Book</h2>
+      <p>Check console for queried books</p>
+    </div>
+  );
 };
-
 export default QueryBook;

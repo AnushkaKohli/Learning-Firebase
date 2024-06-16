@@ -85,3 +85,69 @@ await deleteDoc(docRef);
 ```jsx
 const q = query(collectionRef, where("author", "==", "John Doe"), orderBy("title"));
 ```
+
+## Authentication
+
+Firebase auth uses a JSON webtoken to authenticate users who might sign in, sign up and logout of our applications. When a user signs in, this web token is sent to firebase server on every request so that firebase can authenticate the request.
+
+### Inititalize Firebase Auth
+
+```jsx
+const auth = getAuth();
+```
+
+### Sign up
+
+```jsx
+createUserWithEmailAndPassword(auth, email, password);
+```
+
+### Sign in
+
+```jsx
+signInWithEmailAndPassword(auth, email, password);
+```
+
+### Sign out
+
+```jsx
+signOut(auth);
+```
+
+### Auth state change
+
+```jsx
+onAuthStateChanged(auth, (user) => {
+  if (user) {
+    console.log("User logged in:", user);
+  } else {
+    console.log("User logged out");
+  }
+});
+```
+
+### Get current user
+
+```jsx
+const user = auth.currentUser;
+```
+
+### Update user profile
+
+```jsx
+updateProfile(user, {
+  displayName: "John Doe",
+  photoURL: "https://example.com/johndoe.jpg",
+});
+```
+
+### Unsubscribe from auth & db changes
+
+```jsx
+const unsub = onSnapshot(collectionRef, (snapshot) => {
+  // Do something
+});
+
+// Unsubscribe
+unsub();
+```
